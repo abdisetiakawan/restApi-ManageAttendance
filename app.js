@@ -32,7 +32,7 @@ sequelize
 
 app.get("/", (req, res) => {
   res.send(
-    "Selamat datang di Aplikasi Absensi Karyawan by Fadillah al Kautsar x YoonaBlackpinkkkkkkk"
+    "Selamat datang di Aplikasi Absensi Karyawan by Fadillah al Kautsar x YoonA Fvnky"
   );
 });
 
