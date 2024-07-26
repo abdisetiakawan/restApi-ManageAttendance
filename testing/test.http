@@ -1,4 +1,4 @@
-@baseUrl = {{BASE_URL}}
+@baseUrl = https://yoonabsen-production.up.railway.app
 @adminToken = {{ADMIN_TOKEN}}
 @employeeToken = {{EMPLOYEE_TOKEN}}
 
