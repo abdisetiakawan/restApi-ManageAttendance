@@ -1,5 +1,9 @@
+@baseUrl = {{BASE_URL}}
+@adminToken = {{ADMIN_TOKEN}}
+@employeeToken = {{EMPLOYEE_TOKEN}}
+
 ### Register Admin User
-POST http://localhost:3000/auth/register
+POST {{baseUrl}}/auth/register
 Content-Type: application/json
 
 {
@@ -9,7 +13,7 @@ Content-Type: application/json
 }
 
 ### Register Employee User
-POST http://localhost:3000/auth/register
+POST {{baseUrl}}/auth/register
 Content-Type: application/json
 
 {
@@ -19,7 +23,7 @@ Content-Type: application/json
 }
 
 ### Login as Admin
-POST http://localhost:3000/auth/login
+POST {{baseUrl}}/auth/login
 Content-Type: application/json
 
 {
@@ -28,7 +32,7 @@ Content-Type: application/json
 }
 
 ### Login as Employee
-POST http://localhost:3000/auth/login
+POST {{baseUrl}}/auth/login
 Content-Type: application/json
 
 {
@@ -37,24 +41,23 @@ Content-Type: application/json
 }
 
 ### Check-In
-POST http://localhost:3000/attendance/checkin
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IktBUjEiLCJyb2xlIjoia2FyeWF3YW4iLCJpYXQiOjE3MjE4MDA5MjEsImV4cCI6MTcyMTgwNDUyMX0.uQOLv12kC-p_3haWviufwCO-7TQbN0-MfBTWRgcoJhM
+POST {{baseUrl}}/attendance/checkin
+Authorization: Bearer {{employeeToken}}
 Content-Type: application/json
 
 ### Check-Out
-POST http://localhost:3000/attendance/checkout
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IktBUjEiLCJyb2xlIjoia2FyeWF3YW4iLCJpYXQiOjE3MjE4MDA5MjEsImV4cCI6MTcyMTgwNDUyMX0.uQOLv12kC-p_3haWviufwCO-7TQbN0-MfBTWRgcoJhM
+POST {{baseUrl}}/attendance/checkout
+Authorization: Bearer {{employeeToken}}
 Content-Type: application/json
 
 ### View Attendance History
-GET http://localhost:3000/attendance/history
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IktBUjEiLCJyb2xlIjoia2FyeWF3YW4iLCJpYXQiOjE3MjE4MDA5MjEsImV4cCI6MTcyMTgwNDUyMX0.uQOLv12kC-p_3haWviufwCO-7TQbN0-MfBTWRgcoJhM
+GET {{baseUrl}}/attendance/history
+Authorization: Bearer {{employeeToken}}
 
 ### Get All Employees
-GET http://localhost:3000/admin/employees
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFETTEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE4MDEwNTIsImV4cCI6MTcyMTgwNDY1Mn0.IaKuXZJqHFZ4nl8hCNRQq8mNGDTqE0WnSLAtUY7tDAE
+GET {{baseUrl}}/admin/employees
+Authorization: Bearer {{adminToken}}
 
 ### Recap Attendance
-GET http://localhost:3000/admin/attendance
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFETTEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE4MDEwNTIsImV4cCI6MTcyMTgwNDY1Mn0.IaKuXZJqHFZ4nl8hCNRQq8mNGDTqE0WnSLAtUY7tDAE
-
+GET {{baseUrl}}/admin/attendance
+Authorization: Bearer {{adminToken}}
